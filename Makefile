@@ -3,7 +3,7 @@
 ENV_NAME    := hpc-inference
 MODEL_NAME  := meta-llama/Llama-3.1-8B-Instruct
 MODEL_PATH  := $(MODELS_ROOT)/$(MODEL_NAME)
-SLURM_FLAGS := -A $(SLURM_ACCOUNT) -q $(SLURM_QUEUE) --time=02:15:00 --gres=gpu:4 --cpus-per-task=80
+SLURM_FLAGS := -A $(SLURM_ACCOUNT) -q $(SLURM_QUEUE) --time=00:30:00 --gres=gpu:4 --cpus-per-task=80
 
 .PHONY: env run
 

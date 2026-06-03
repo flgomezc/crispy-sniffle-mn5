@@ -36,7 +36,7 @@ User:   <review text>
 
 - **Cluster:** MareNostrum 5
 - **GPU:** NVIDIA H100 × 4 (single node)
-- **SLURM allocation:** `salloc -A $SLURM_ACCOUNT -q $SLURM_QUEUE --time=02:15:00 --gres=gpu:4 --cpus-per-task=80`
+- **SLURM allocation:** `salloc -A $SLURM_ACCOUNT -q $SLURM_QUEUE --time=00:30:00 --gres=gpu:4 --cpus-per-task=80`
 - **Environment:** conda (see `environment.yaml`) — no system modules loaded
 - **Local config:** copy `.env.example` to `.env` and set `MODELS_ROOT`, `SLURM_ACCOUNT`, `SLURM_QUEUE`
 
@@ -55,7 +55,7 @@ User:   <review text>
 
 - Metrics: **Accuracy** and **F1** (binary, positive class)
 - Exploratory phase — no target threshold yet
-- Pipeline must run end-to-end on the test split within the 2h15m SLURM allocation
+- Pipeline must run end-to-end on the test split within the 30-minute SLURM allocation
 
 ## Future Scope
 

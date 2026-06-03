@@ -39,7 +39,7 @@ Makefile                      # env + run recipes (reads .env)
 ## HPC Config
 
 - **Cluster:** MareNostrum 5 · **GPU:** NVIDIA H100 × 4, single node
-- **Max walltime:** 2h15m
+- **Max walltime:** 30 min
 - **No system modules** — use only the `hpc-inference` conda env
 
 ## Inference Design
