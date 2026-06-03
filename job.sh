@@ -12,13 +12,12 @@ set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
 source "$SLURM_SUBMIT_DIR/.env"
 
-echo "[$(date '+%H:%M:%S')] === Feature 3: Single inference ==="
+echo "[$(date '+%H:%M:%S')] === Feature 4: Batch inference ==="
 echo "Model: $MODELS_ROOT/meta-llama/Llama-3.1-8B-Instruct"
 
 conda run --no-capture-output -n hpc-inference \
     python src/run_inference.py \
         --model "$MODELS_ROOT/meta-llama/Llama-3.1-8B-Instruct" \
-        --tensor-parallel-size 2 \
-        --single
+        --tensor-parallel-size 2
 
 echo "[$(date '+%H:%M:%S')] === DONE ==="
