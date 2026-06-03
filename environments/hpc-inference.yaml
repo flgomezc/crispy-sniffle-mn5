@@ -1,0 +1,29 @@
+name: hpc-inference
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+    # core
+    - torch==2.9.1
+    - transformers==4.57.6
+    - accelerate==1.12.0
+    - datasets==4.5.0
+    - evaluate==0.4.6
+    # vllm inference
+    - vllm==0.15.1
+    # peft fine-tuning
+    - peft==0.18.1
+    - bitsandbytes==0.49.2
+    # metrics
+    - jiwer==4.0.0
+    - spacy==3.8.11
+    - https://github.com/explosion/spacy-models/releases/download/xx_sent_ud_sm-3.8.0/xx_sent_ud_sm-3.8.0-py3-none-any.whl
+    - langid==1.1.6
+    # utils
+    - jupyterlab==4.5.5
+    - ipywidgets==8.1.8
+    - scikit-learn==1.8.0
+    - matplotlib==3.10.8

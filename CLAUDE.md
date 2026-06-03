@@ -31,7 +31,7 @@ src/
 results/                      # Git-ignored
 ├── <model>_predictions.csv   # Per-sample: id, text, true_label, predicted_label, raw_output
 └── <model>_summary.json      # Accuracy, F1, model, split, timestamp
-environment.yaml              # Conda env (no system modules)
+environments/hpc-inference.yaml  # Conda env (no system modules)
 Makefile                      # env + run recipes (reads .env)
 .env.example                  # Template for local config — copy to .env
 ```
@@ -48,3 +48,17 @@ Makefile                      # env + run recipes (reads .env)
 - Llama chat template; system prompt constrains output strictly to `"Positive"` or `"Negative"`
 - Evaluate on **test split** (1,066 samples) by default
 - `--model` argument makes the pipeline model-agnostic for future multi-model runs
+
+## Development workflow
+- Implement one feature at a time (see feature list below)
+- After each feature: submit via SLURM, capture job ID, monitor, check logs
+- Log path: repo/logs/$SLURM_JOB_ID
+- Only proceed to next feature when current one is verified working
+- Commit after each passing feature
+
+## Feature list
+- [ ] Feature 1: create the environment
+- [ ] Feature 2: load model
+- [ ] Feature 3: run single inference
+- [ ] Feature 4: batch inference
+- [ ] Feature 5: save outputs
