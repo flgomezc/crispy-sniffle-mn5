@@ -12,7 +12,7 @@ set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
 source "$SLURM_SUBMIT_DIR/.env"
 
-echo "[$(date '+%H:%M:%S')] === Feature 4: Batch inference ==="
+echo "[$(date '+%H:%M:%S')] === Feature 5: Batch inference + save outputs ==="
 echo "Model: $MODELS_ROOT/meta-llama/Llama-3.1-8B-Instruct"
 
 conda run --no-capture-output -n hpc-inference \

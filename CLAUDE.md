@@ -59,6 +59,6 @@ Makefile                      # env + run recipes (reads .env)
 ## Feature list
 - [x] Feature 1: create the environment
 - [x] Feature 2: load model
-- [ ] Feature 3: run single inference
-- [ ] Feature 4: batch inference
-- [ ] Feature 5: save outputs
+- [x] Feature 3: run single inference
+- [x] Feature 4: batch inference
+- [x] Feature 5: save outputs
