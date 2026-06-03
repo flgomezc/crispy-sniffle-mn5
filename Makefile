@@ -9,7 +9,7 @@ SLURM_FLAGS := -A $(SLURM_ACCOUNT) -q $(SLURM_QUEUE) --time=00:30:00 --gres=gpu:
 .PHONY: env run
 
 env:
-	conda env create -f $(ENV_FILE)
+	env -u HTTPS_PROXY -u HTTP_PROXY conda env create -f $(ENV_FILE)
 
 run:
 ifndef MODELS_ROOT

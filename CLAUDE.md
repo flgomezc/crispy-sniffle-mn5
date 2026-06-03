@@ -57,8 +57,8 @@ Makefile                      # env + run recipes (reads .env)
 - Commit after each passing feature
 
 ## Feature list
-- [ ] Feature 1: create the environment
-- [ ] Feature 2: load model
+- [x] Feature 1: create the environment
+- [x] Feature 2: load model
 - [ ] Feature 3: run single inference
 - [ ] Feature 4: batch inference
 - [ ] Feature 5: save outputs
